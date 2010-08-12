@@ -34,7 +34,7 @@ $tpl = $modx->getOption('tpl', $scriptProperties, 'gitRepositoryListItem');
 $wrapper = $modx->getOption('wrapper', $scriptProperties, false);
 $cache = $modx->getOption('cache', $scriptProperties, true);
 $ttl = $modx->getOption('ttl', $scriptProperties, 60);
-$ignore = explode(',', $modx->getOption('mgh.ignore', null, 'modgithub'));
+$ignore = explode(',', $modx->getOption('mgh.ignore', null, ''));
 
 $repositories = $mgh->getRepositories($cache, $ttl);
 $output = '';
