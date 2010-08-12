@@ -52,6 +52,16 @@ class MGH {
         return $data;
     }
     
+    public function getCommits($repository, $branch, $cache = true, $ttl = 60) {
+    	if ($this->user =='') return array();
+        $data = $this->modx->cacheManager->get('github/commits' . '_' . $repository . '_' . $branch);
+        if ($data == null || $cache == false) {
+            $data = $this->api->getCommitApi()->getBranchCommits($this->user, $repository, $branch);       
+            if ($cache == true) $this->modx->cacheManager->set('github/commits' . '_' . $repository . '_' . $branch, $data, $ttl);
+        }
+        return $data;
+    }
+    
     /**
      * Gets a Chunk and caches it; also falls back to file-based templates
      * for easier debugging.

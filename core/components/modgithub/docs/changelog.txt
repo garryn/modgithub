@@ -2,5 +2,6 @@ Changelog for modGitHub
 
 modGitHub 1.0.0
 ===============
+- Add gitRecentCommits snippet
 - Add system settings for user authentication to GitHub
 - Initial codebase commit

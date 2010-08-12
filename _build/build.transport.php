@@ -37,7 +37,7 @@ set_time_limit(0);
 define('PKG_NAME','modGitHub');
 define('PKG_NAME_LOWER','modgithub');
 define('PKG_VERSION','1.0.0');
-define('PKG_RELEASE','alpha2');
+define('PKG_RELEASE','alpha3');
 
 /* define sources */
 $root = dirname(dirname(__FILE__)).'/';
